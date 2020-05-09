@@ -13,11 +13,18 @@ buttonReset();
 function buttonReset(){ //function that shows if reset button is clicked
     let resetButton=document.getElementById('reset');
     resetButton.addEventListener("click", function(){
-        let options = window.prompt("how many squares per side to make the new sketch?",16);
-       container.innerHTML='';
-       createGrid(options,options);
-       selectCell();
-        
+    let options = window.prompt("how many squares per side to make the new sketch?",16);
+    if (options>7 && options<121){
+    container.innerHTML='';
+    createGrid(options,options);
+    selectCell();
+    } else {
+        window.alert("incorrect selection, please try again!");
+        options = 16;
+        container.innerHTML='';
+        createGrid(options,options);
+        selectCell(); 
+    }
     });
 }
 
