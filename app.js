@@ -14,7 +14,7 @@ function buttonReset(){ //function that shows if reset button is clicked
     let resetButton=document.getElementById('reset');
     resetButton.addEventListener("click", function(){
     let options = window.prompt("how many squares per side to make the new sketch?",16);
-    if (options>7 && options<121){
+    if (options>7 && options<121){ //checks if selections is betweem 8 and 120
     container.innerHTML='';
     createGrid(options,options);
     selectCell();
