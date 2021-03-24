@@ -1,64 +1,65 @@
-:root{
-    font-size: 10px;
-    text-align: center;
-    --row-size: 1;
-    --column-size: 1;
-    --color-principal: #2d283d;
-    --color-second:  #564f6f;
-    --color-third: #802bb1;
-    --color-fourth: #d1d7e0;
-    background-color: var(--color-principal);
+:root {
+  font-size: 10px;
+  text-align: center;
+  --row-size: 1;
+  --column-size: 1;
+  --color-principal: #2d283d;
+  --color-second: #564f6f;
+  --color-third: #802bb1;
+  --color-fourth: #d1d7e0;
+  background-color: var(--color-principal);
 }
 
 #game {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    margin-left: 20px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  margin-left: 20px;
 }
 
 #title {
-    font-size: 30px;
-    color: var(--color-fourth);
-    margin: 0 auto; 
+  font-size: 30px;
+  color: var(--color-fourth);
+  margin: 0 auto;
 }
 
 #container {
-    display: grid;
-    margin: auto;
-    position: center;
-    border: var(--color-third) 2px;
-    height: 500px;
-    width: 500px; 
-    grid-template-rows: repeat(var(--row-size), 1fr); /*creates the rows sized --row-size*/
-    grid-template-columns: repeat(var(--column-size), 1fr); /*creates the column sized --column-size*/
+  display: grid;
+  margin: auto;
+  position: center;
+  height: 500px;
+  width: 500px;
+  grid-template-rows: repeat(
+    var(--row-size),
+    1fr
+  ); /*creates the rows sized --row-size*/
+  grid-template-columns: repeat(
+    var(--column-size),
+    1fr
+  ); /*creates the column sized --column-size*/
 }
 
 .inside {
-    background-color: var(--color-second);
+  background-color: var(--color-second);
 }
 
 .playing {
-    border-color: var(--color-third) 1 px;
-    background-color: var(--color-fourth);
-  }
+  border-color: var(--color-third) 1 px;
+  background-color: var(--color-fourth);
+}
 
-  #reset {
-      font-size: 20px;
-      color: var(--color-third);
-      background-color: var(--color-fourth);
-      margin-bottom: 2rem;
-      margin-top: 10 rem;
-      border-radius: 20px;
+#reset {
+  font-size: 20px;
+  color: var(--color-third);
+  background-color: var(--color-fourth);
+  margin-bottom: 2rem;
+  margin-top: 10 rem;
+  border-radius: 20px;
+}
 
-  }
-
-  #instructions {
-    color: var(--color-fourth);
-    background-color: var(--color-second);
-    border-radius: 10px;
-    font-size: 15px;
-    border: solid var(--color-fourth) 2px;
-    
-    
-  }
-
+#instructions {
+  color: var(--color-fourth);
+  background-color: var(--color-second);
+  border-radius: 10px;
+  font-size: 15px;
+  border: solid var(--color-fourth) 2px;
+}
